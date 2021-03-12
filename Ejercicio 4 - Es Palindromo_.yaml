@@ -1,0 +1,285 @@
+name: Ejercicio 4 - Es Palindromo?
+source code: |
+  input: 'somos'
+  blank: ' '
+  start state: ON
+  synonyms:
+    ACEPTADO: {R: ACEPTADO}
+    RECHAZADO: {R: RECHAZADO}
+  table:
+    ON:
+      a: {write: ' ', R: TA}
+      b: {write: ' ', R: TB}
+      c: {write: ' ', R: TC}
+      d: {write: ' ', R: TD}
+      e: {write: ' ', R: TE}
+      f: {write: ' ', R: TF}
+      g: {write: ' ', R: TG}
+      h: {write: ' ', R: TH}
+      i: {write: ' ', R: TI}
+      j: {write: ' ', R: TJ}
+      k: {write: ' ', R: TK}
+      l: {write: ' ', R: TL}
+      m: {write: ' ', R: TM}
+      n: {write: ' ', R: TN}
+      o: {write: ' ', R: TO}
+      p: {write: ' ', R: TP}
+      q: {write: ' ', R: TQ}
+      r: {write: ' ', R: TR}
+      s: {write: ' ', R: TS}
+      t: {write: ' ', R: TT}
+      u: {write: ' ', R: TU}
+      v: {write: ' ', R: TV}
+      w: {write: ' ', R: TW}
+      x: {write: ' ', R: TX}
+      y: {write: ' ', R: TY}
+      z: {write: ' ', R: TZ}
+      ' ': ACEPTADO
+      
+    TA:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BA}
+    TB:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BB}  
+    TC:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BC}
+    TD:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BD}
+    TE:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BE}
+    TF:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BF}
+    TG:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BG}
+    TH:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BH}
+    TI:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BI}
+    TJ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BJ}
+    TK:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BK}
+    TL:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BL}
+    TM:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BM}
+    TN:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BN}
+    TO:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BO}
+    TP:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BP}
+    TQ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BQ}
+    TR:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BR}
+    TS:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BS}
+    TT:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BT}
+    TU:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BU}
+    TV:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BV}
+    TW:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BW}
+    TX:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BX}
+    TY:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BY}
+    TZ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {L: BZ}
+
+    BA:
+      a: {write: ' ', L: R}
+      [b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BB:
+      b: {write: ' ', L: R}
+      [a,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BC:
+      c: {write: ' ', L: R}
+      [a,b,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BD:
+      d: {write: ' ', L: R}
+      [a,b,c,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BE:
+      e: {write: ' ', L: R}
+      [a,b,c,d,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BF:
+      f: {write: ' ', L: R}
+      [a,b,c,d,e,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BG:
+      g: {write: ' ', L: R}
+      [a,b,c,d,e,f,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BH:
+      h: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BI:
+      i: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BJ:
+      j: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BK:
+      k: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BL:
+      l: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BM:
+      m: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,n,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BN:
+      n: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,o,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BO:
+      o: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,p,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BP:
+      p: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,q,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BQ:
+      q: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,r,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BR:
+      r: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,s,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BS:
+      s: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,t,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BT:
+      t: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,u,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BU:
+      u: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,v,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BV:
+      v: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,w,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BW:
+      w: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,x,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BX:
+      x: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,y,z]: RECHAZADO
+      ' ': ACEPTADO
+    BY:
+      y: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,z]: RECHAZADO
+      ' ': ACEPTADO
+    BZ:
+      z: {write: ' ', L: R}
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y]: RECHAZADO
+      ' ': ACEPTADO
+
+      
+    R:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      ' ': {R: ON}
+    ACEPTADO:
+    RECHAZADO:
+positions:
+  ON: {x: 417.35, y: 206.16}
+  TA: {x: 20, y: 20}
+  TB: {x: 20, y: 59.95}
+  TC: {x: 20, y: 99.02}
+  TD: {x: 20, y: 139.92}
+  TE: {x: 20, y: 179.23}
+  TF: {x: 20, y: 218.48}
+  TG: {x: 20, y: 279.82}
+  TH: {x: 20, y: 320.21}
+  TI: {x: 20, y: 361.1}
+  TJ: {x: 20, y: 399.55}
+  TK: {x: 20, y: 439.82}
+  TL: {x: 20, y: 480}
+  TM: {x: 244.53, y: 72.15}
+  TN: {x: 566.79, y: 72.18}
+  TO: {x: 780, y: 20}
+  TP: {x: 780, y: 59.17}
+  TQ: {x: 778.12, y: 98.11}
+  TR: {x: 780, y: 138.42}
+  TS: {x: 780, y: 178.49}
+  TT: {x: 780, y: 218.54}
+  TU: {x: 780, y: 283.21}
+  TV: {x: 780, y: 323.3}
+  TW: {x: 780, y: 361.85}
+  TX: {x: 780, y: 401.51}
+  TY: {x: 780, y: 440.62}
+  TZ: {x: 780, y: 480}
+  BA: {x: 118.25, y: 20}
+  BB: {x: 118.66, y: 59.89}
+  BC: {x: 120.18, y: 99.14}
+  BD: {x: 121.06, y: 137.6}
+  BE: {x: 118.98, y: 176.99}
+  BF: {x: 121.66, y: 215.94}
+  BG: {x: 117.64, y: 282.29}
+  BH: {x: 119.54, y: 321.39}
+  BI: {x: 119.52, y: 361.74}
+  BJ: {x: 121, y: 400.18}
+  BK: {x: 120.71, y: 440.22}
+  BL: {x: 122.88, y: 480}
+  BM: {x: 367.58, y: 73.37}
+  BN: {x: 466.75, y: 72.97}
+  BO: {x: 680.03, y: 20}
+  BP: {x: 682.95, y: 60.7}
+  BQ: {x: 684.23, y: 101.22}
+  BR: {x: 682.75, y: 140.55}
+  BS: {x: 681.62, y: 179.25}
+  BT: {x: 682.84, y: 218.65}
+  BU: {x: 677.02, y: 279.56}
+  BV: {x: 679.08, y: 319.53}
+  BW: {x: 680.12, y: 359.6}
+  BX: {x: 679.76, y: 399.4}
+  BY: {x: 681.39, y: 439.48}
+  BZ: {x: 681.69, y: 480}
+  R: {x: 417.32, y: 321.47}
+  ACEPTADO: {x: 361.09, y: 443.4}
+  RECHAZADO: {x: 471.18, y: 443.4}

@@ -1,0 +1,185 @@
+name: Ejercicio 3 -  Sumar 2 Numeros
+source code: |-
+  input: '14 5'
+  blank: ' '
+  start state: ON
+  table:
+    ON:
+      [0,1,2,3,4,5,6,7,8,9]: R
+      ' ': {R: M}
+    M:
+      [0,1,2,3,4,5,6,7,8,9]: R
+      ' ': {L: L}
+    L:
+      0: {write: " ", L: T0}
+      1: {write: " ", L: T1}
+      2: {write: " ", L: T2}
+      3: {write: " ", L: T3}
+      4: {write: " ", L: T4}
+      5: {write: " ", L: T5}
+      6: {write: " ", L: T6}
+      7: {write: " ", L: T7}
+      8: {write: " ", L: T8}
+      9: {write: " ", L: T9}
+      
+    S:
+      ' ': {write: 1, R: F}
+      0: {write: 1, L: F}
+      1: {write: 2, L: F}
+      2: {write: 3, L: F}
+      3: {write: 4, L: F}
+      4: {write: 5, L: F}
+      5: {write: 6, L: F}
+      6: {write: 7, L: F}
+      7: {write: 8, L: F}
+      8: {write: 9, L: F}
+      9: {write: 0, L}
+      
+    T0:
+      ' ': L
+      0: {write: 0, L: F}
+      1: {write: 1, L: F}
+      2: {write: 2, L: F}
+      3: {write: 3, L: F}
+      4: {write: 4, L: F}
+      5: {write: 5, L: F}
+      6: {write: 6, L: F}
+      7: {write: 7, L: F}
+      8: {write: 8, L: F}
+      9: {write: 9, L: F}
+      
+    T1:
+      ' ': L
+      0: {write: 1, L: F}
+      1: {write: 2, L: F}
+      2: {write: 3, L: F}
+      3: {write: 4, L: F}
+      4: {write: 5, L: F}
+      5: {write: 6, L: F}
+      6: {write: 7, L: F}
+      7: {write: 8, L: F}
+      8: {write: 9, L: F}
+      9: {write: 0, L}
+      
+    T2:
+      ' ': L
+      0: {write: 2, L: F}
+      1: {write: 3, L: F}
+      2: {write: 4, L: F}
+      3: {write: 5, L: F}
+      4: {write: 6, L: F}
+      5: {write: 7, L: F}
+      6: {write: 8, L: F}
+      7: {write: 9, L: F}
+      8: {write: 0, L: S}
+      9: {write: 1, L: S}
+      
+    T3:
+      ' ': L
+      0: {write: 3, L: F}
+      1: {write: 4, L: F}
+      2: {write: 5, L: F}
+      3: {write: 6, L: F}
+      4: {write: 7, L: F}
+      5: {write: 8, L: F}
+      6: {write: 9, L: F}
+      7: {write: 0, L: S}
+      8: {write: 1, L: S}
+      9: {write: 2, L: S}
+      
+    T4:
+      ' ': L
+      0: {write: 4, L: F}
+      1: {write: 5, L: F}
+      2: {write: 6, L: F}
+      3: {write: 7, L: F}
+      4: {write: 8, L: F}
+      5: {write: 9, L: F}
+      6: {write: 0, L: S}
+      7: {write: 1, L: S}
+      8: {write: 2, L: S}
+      9: {write: 3, L: S}
+      
+    T5:
+      ' ': L
+      0: {write: 5, L: F}
+      1: {write: 6, L: F}
+      2: {write: 7, L: F}
+      3: {write: 8, L: F}
+      4: {write: 9, L: F}
+      5: {write: 0, L: S}
+      6: {write: 1, L: S}
+      7: {write: 2, L: S}
+      8: {write: 3, L: S}
+      9: {write: 4, L: S}
+      
+    T6:
+      ' ': L
+      0: {write: 6, L: F}
+      1: {write: 7, L: F}
+      2: {write: 8, L: F}
+      3: {write: 9, L: F}
+      4: {write: 0, L: S}
+      5: {write: 1, L: S}
+      6: {write: 2, L: S}
+      7: {write: 3, L: S}
+      8: {write: 4, L: S}
+      9: {write: 5, L: S}
+      
+    T7:
+      ' ': L
+      0: {write: 7, L: F}
+      1: {write: 8, L: F}
+      2: {write: 9, L: F}
+      3: {write: 0, L: S}
+      4: {write: 1, L: S}
+      5: {write: 2, L: S}
+      6: {write: 3, L: S}
+      7: {write: 4, L: S}
+      8: {write: 5, L: S}
+      9: {write: 6, L: S}
+      
+    T8:
+      ' ': L
+      0: {write: 8, L: F}
+      1: {write: 9, L: F}
+      2: {write: 0, L: S}
+      3: {write: 1, L: S}
+      4: {write: 2, L: S}
+      5: {write: 3, L: S}
+      6: {write: 4, L: S}
+      7: {write: 5, L: S}
+      8: {write: 6, L: S}
+      9: {write: 7, L: S}
+      
+    T9:
+      ' ': L
+      0: {write: 9, L: F}
+      1: {write: 0, L: S}
+      2: {write: 1, L: S}
+      3: {write: 2, L: S}
+      4: {write: 3, L: S}
+      5: {write: 4, L: S}
+      6: {write: 5, L: S}
+      7: {write: 6, L: S}
+      8: {write: 7, L: S}
+      9: {write: 8, L: S}
+    F:
+    
+    
+positions:
+  ON: {x: 42.56, y: 236.91}
+  M: {x: 134.96, y: 238.85}
+  L: {x: 222.28, y: 239.12}
+  S: {x: 672.93, y: 423.72}
+  T0: {x: 365.67, y: 61.4}
+  T1: {x: 366.31, y: 101.59}
+  T2: {x: 367.14, y: 141.71}
+  T3: {x: 366.33, y: 180.95}
+  T4: {x: 366.98, y: 222.1}
+  T5: {x: 368.44, y: 263.34}
+  T6: {x: 368.52, y: 303.95}
+  T7: {x: 369.23, y: 343.9}
+  T8: {x: 368.44, y: 385.01}
+  T9: {x: 367.45, y: 425.86}
+  F: {x: 665.56, y: 60.38}

@@ -1,0 +1,34 @@
+name: Ejercicio 6 - Es un  e-mail?
+source code: |-
+  input: 'za.pa-to'
+  blank: ' '
+  start state: ON
+  table:
+    ON:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,'_','-','.','@']: R
+      ' ': {L: F1}
+    
+    F1:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '.': {L: F2}
+      ['_','-','@',' ']: {R: RECHAZADO}
+    F2:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,'.']: L
+      '@': {L: F3}
+      ['_','-',' ']: {R: RECHAZADO}
+    
+    F3:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,'.','_',' ']: L
+      ' ': {L: ACEPTADO}
+      ['@']: {R: RECHAZADO}
+      
+
+    ACEPTADO:
+    RECHAZADO:
+positions:
+  ON: {x: 69.41, y: 242}
+  F1: {x: 219.6, y: 244.92}
+  F2: {x: 346.02, y: 250.05}
+  F3: {x: 479.62, y: 251.84}
+  ACEPTADO: {x: 621.74, y: 253.89}
+  RECHAZADO: {x: 345.94, y: 394.12}

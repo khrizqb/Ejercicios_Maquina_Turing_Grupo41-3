@@ -1,0 +1,348 @@
+name: Ejercicio 2 - Copiar Palabra
+source code: |-
+  input: 'computadora'
+  blank: ' '
+  start state: ON
+  table:
+    ON:
+      a: {write: '*', R: MA}
+      b: {write: '*', R: MB}
+      c: {write: '*', R: MC}
+      d: {write: '*', R: MD}
+      e: {write: '*', R: ME}
+      f: {write: '*', R: MF}
+      g: {write: '*', R: MG}
+      h: {write: '*', R: MH}
+      i: {write: '*', R: MI}
+      j: {write: '*', R: MJ}
+      k: {write: '*', R: MK}
+      l: {write: '*', R: ML}
+      m: {write: '*', R: MM}
+      n: {write: '*', R: MN}
+      o: {write: '*', R: MO}
+      p: {write: '*', R: MP}
+      q: {write: '*', R: MQ}
+      r: {write: '*', R: MR}
+      s: {write: '*', R: MS}
+      t: {write: '*', R: MT}
+      u: {write: '*', R: MU}
+      v: {write: '*', R: MV}
+      w: {write: '*', R: MW}
+      x: {write: '*', R: MX}
+      y: {write: '*', R: MY}
+      z: {write: '*', R: MZ}
+
+    MA:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PA}
+    PA:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: a, L: RA}
+    RA:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: a, R: ON}
+    MB:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PB}
+    PB:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: b, L: RB}
+    RB:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: b, R: ON}
+    MC:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PC}
+    PC:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: c, L: RC}
+    RC:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: c, R: ON}
+    MD:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PD}
+    PD:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: d, L: RD}
+    RD:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: d, R: ON}
+    ME:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PE}
+    PE:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: e, L: RE}
+    RE:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: e, R: ON}
+    MF:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PF}
+    PF:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: f, L: RF}
+    RF:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: f, R: ON}
+    MG:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PG}
+    PG:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: g, L: RG}
+    RG:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: g, R: ON}
+    MH:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PH}
+    PH:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: h, L: RH}
+    RH:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: h, R: ON}
+    MI:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PI}
+    PI:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: i, L: RI}
+    RI:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: i, R: ON}
+    MJ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PJ}
+    PJ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: j, L: RJ}
+    RJ:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: j, R: ON}
+    MK:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PK}
+    PK:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: k, L: RK}
+    RK:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: k, R: ON}
+    ML:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PL}
+    PL:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: l, L: RL}
+    RL:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: l, R: ON}
+    MM:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PM}
+    PM:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: m, L: RM}
+    RM:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: m, R: ON}
+    MN:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PN}
+    PN:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: n, L: RN}
+    RN:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: n, R: ON}
+    MO:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PO}
+    PO:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: o, L: RO}
+    RO:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: o, R: ON}
+    MP:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PP}
+    PP:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: p, L: RP}
+    RP:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: p, R: ON}
+    MQ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PQ}
+    PQ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: q, L: RQ}
+    RQ:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: q, R: ON}
+    MR:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PR}
+    PR:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: r, L: RR}
+    RR:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: r, R: ON}
+    MS:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PS}
+    PS:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: s, L: RS}
+    RS:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: s, R: ON}
+    MT:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PT}
+    PT:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: t, L: RT}
+    RT:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: t, R: ON}
+    MU:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PU}
+    PU:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: u, L: RU}
+    RU:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: u, R: ON}
+    MV:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PV}
+    PV:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: v, L: RV}
+    RV:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: v, R: ON}
+    MW:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PW}
+    PW:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: w, L: RW}
+    RW:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: w, R: ON}
+    MX:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PX}
+    PX:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: x, L: RX}
+    RX:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: x, R: ON}
+    MY:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PY}
+    PY:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: y, L: RY}
+    RY:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: y, R: ON}
+    MZ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {R: PZ}
+    PZ:
+      [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: R
+      ' ': {write: z, L: RZ}
+    RZ:
+      [' ',a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z]: L
+      '*': {write: z, R: ON}
+positions:
+  ON: {x: 398.64, y: 256.43}
+  MA: {x: 217, y: 20}
+  PA: {x: 117.87, y: 20}
+  RA: {x: 20, y: 20}
+  MB: {x: 217.4, y: 60.01}
+  PB: {x: 118.53, y: 59.58}
+  RB: {x: 20, y: 58.62}
+  MC: {x: 217.13, y: 99.71}
+  PC: {x: 117.58, y: 99.76}
+  RC: {x: 20, y: 97.08}
+  MD: {x: 216.22, y: 139.41}
+  PD: {x: 116.65, y: 139.18}
+  RD: {x: 20, y: 135.61}
+  ME: {x: 219.05, y: 179.47}
+  PE: {x: 115.9, y: 178.78}
+  RE: {x: 20, y: 175.75}
+  MF: {x: 220.28, y: 219.86}
+  PF: {x: 115.2, y: 218}
+  RF: {x: 20, y: 215.84}
+  MG: {x: 215.63, y: 281.51}
+  PG: {x: 119.47, y: 283.24}
+  RG: {x: 20, y: 279}
+  MH: {x: 215, y: 322.49}
+  PH: {x: 119.47, y: 321.03}
+  RH: {x: 20, y: 318.46}
+  MI: {x: 214.93, y: 362.89}
+  PI: {x: 119.1, y: 360.82}
+  RI: {x: 20, y: 358.88}
+  MJ: {x: 213.71, y: 401.64}
+  PJ: {x: 119.47, y: 400.86}
+  RJ: {x: 20, y: 398.87}
+  MK: {x: 214.82, y: 441.36}
+  PK: {x: 118.55, y: 440.05}
+  RK: {x: 20, y: 439.39}
+  ML: {x: 216.38, y: 480}
+  PL: {x: 119.37, y: 480}
+  RL: {x: 20, y: 480}
+  MM: {x: 308.48, y: 68.04}
+  PM: {x: 410.12, y: 67.11}
+  RM: {x: 492.65, y: 67.11}
+  MN: {x: 302.29, y: 452.79}
+  PN: {x: 397.13, y: 451.85}
+  RN: {x: 496.69, y: 447.16}
+  MO: {x: 583.24, y: 20}
+  PO: {x: 681.69, y: 20}
+  RO: {x: 780, y: 20}
+  MP: {x: 581.34, y: 60.13}
+  PP: {x: 680.13, y: 59.6}
+  RP: {x: 780, y: 60.25}
+  MQ: {x: 579.97, y: 99.23}
+  PQ: {x: 680.92, y: 99.01}
+  RQ: {x: 780, y: 100.92}
+  MR: {x: 577.75, y: 139.22}
+  PR: {x: 681.47, y: 137.69}
+  RR: {x: 780, y: 140.64}
+  MS: {x: 577.33, y: 178.86}
+  PS: {x: 682.41, y: 177.62}
+  RS: {x: 780, y: 180.48}
+  MT: {x: 577.88, y: 217.99}
+  PT: {x: 679.59, y: 217.25}
+  RT: {x: 780, y: 220.76}
+  MU: {x: 573.35, y: 283.33}
+  PU: {x: 677.72, y: 284.26}
+  RU: {x: 780, y: 283.19}
+  MV: {x: 575.4, y: 321.96}
+  PV: {x: 675, y: 323.16}
+  RV: {x: 780, y: 323.12}
+  MW: {x: 575.18, y: 360.82}
+  PW: {x: 674.06, y: 362.13}
+  RW: {x: 780, y: 363.15}
+  MX: {x: 573.94, y: 400.74}
+  PX: {x: 675.84, y: 401.17}
+  RX: {x: 780, y: 401.19}
+  MY: {x: 573.19, y: 441.01}
+  PY: {x: 675.84, y: 441.2}
+  RY: {x: 780, y: 439.64}
+  MZ: {x: 573.91, y: 480}
+  PZ: {x: 675.81, y: 480}
+  RZ: {x: 780, y: 480}

@@ -1,0 +1,28 @@
+name: Ejercicio 1  - Sumar +1
+source code: |-
+  input: '1899'
+  blank: ' '
+  start state: ON
+  table:
+    ON:  
+      [0,1,2,3,4,5,6,7,8,9]: R
+      ' ': {L: S1}
+    S1:
+      0: {write: 1, R: F}
+      1: {write: 2, R: F}
+      2: {write: 3, R: F}
+      3: {write: 4, R: F}
+      4: {write: 5, R: F}
+      5: {write: 6, R: F}
+      6: {write: 7, R: F}
+      7: {write: 8, R: F}
+      8: {write: 9, R: F}
+      9: {write: 0, L}
+      ' ': {write: 1, R: F}
+    F:
+
+    
+positions:
+  ON: {x: 177.64, y: 267.94}
+  S1: {x: 350.09, y: 270.33}
+  F: {x: 547.82, y: 270.76}
